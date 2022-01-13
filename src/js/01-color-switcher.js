@@ -7,9 +7,9 @@ btnStopEl.addEventListener('click', stopSwitch);
 let changeColor = null
 
 function startSwitch() {
+  btnStartEl.disabled = true;
   changeColor = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
-    btnStartEl.disabled = true;
   }, 1000);
 }
 
