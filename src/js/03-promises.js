@@ -5,12 +5,11 @@ formEl.addEventListener('submit', dataProcessing);
 const delayInput = document.querySelector('[name="delay"]');
 const stepInput = document.querySelector('[name="step"]');
 const amountInput = document.querySelector('[name="amount"]');
-// console.log(delay);
 
 function dataProcessing(event) {
   event.preventDefault();
 
-  let delay = +delayInput.value;
+  let delay = Number(delayInput.value);
   for (let index = 1; index <= amountInput.value; index++) {
     createPromise(index, delay)
       .then(({ position, delay }) => {
